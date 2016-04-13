@@ -7,7 +7,7 @@
 
 close all, clear all
 
-addpath('funcoes');
+addpath('functions');
 
 % -------------------------- Parametros Iniciais --------------------------
 g = -9.809;      % [m/s^2]   Aceleração da gravidade
@@ -16,7 +16,7 @@ ho = input('Altura Inicial: ');       % [m]       ALtura inicial
 vo = input('Velocidade Inicial: ');   % [m/s]     Velocidade Inicial
 
 syms t;
-t = baskara(g/2, vo, ho);
+t = bhaskara(g/2, vo, ho);
 
 array_t = 0:0.1:t;                              % Vetor de tempo
 array_h = ho + vo.*array_t + g.*array_t.^2/2;   % Vetor contem a altura
